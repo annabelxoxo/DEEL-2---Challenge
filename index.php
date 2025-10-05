@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-// Controle: is de gebruiker ingelogd?
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    // Niet ingelogd? Terug naar loginpagina.
     header("Location: login.php");
     exit;
 }
@@ -14,11 +12,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <head>
     <meta charset="UTF-8">
     <title>Welkom</title>
-        <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Welkom op je homepage!</h1>
-    <p>Je bent succesvol ingelogd als <strong>jenaam@shop.com</strong>.</p>
-    <a href="logout.php">Uitloggen</a>
+    <div class="container">
+        <h1>Welkom op je homepage!</h1>
+        <p>Je bent succesvol ingelogd als <strong>jenaam@shop.com</strong>.</p>
+        <a href="logout.php" class="logout-button">Uitloggen</a>
+    </div>
 </body>
 </html>

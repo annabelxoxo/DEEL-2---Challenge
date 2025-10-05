@@ -24,21 +24,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-        <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <?php if ($error): ?>
-        <p style="color: red;"><?php echo $error; ?></p>
-    <?php endif; ?>
-    <form method="post" action="login.php">
-        <label for="email">E-mailadres:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <div class="login-container">
+        <h2>Login</h2>
+        <?php if ($error): ?>
+            <p class="error"><?php echo $error; ?></p>
+        <?php endif; ?>
 
-        <label for="password">Wachtwoord:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+        <form method="post" action="login.php">
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
 
-        <button type="submit">Inloggen</button>
-    </form>
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Inloggen</button>
+        </form>
+    </div>
 </body>
 </html>
