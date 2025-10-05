@@ -14,6 +14,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <head>
     <meta charset="UTF-8">
     <title>Welkom</title>
+        <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>Welkom op je homepage!</h1>
